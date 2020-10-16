@@ -1,0 +1,27 @@
+div p {
+  border-color: orange;
+}
+
+p > li {
+  outline: 10px solid black;
+}
+
+ul + p {
+  background-color: red;
+}
+
+a:link {
+  color: blue;
+}
+
+a:visited {
+  color: purple;
+}
+
+a:hover {
+  color: yellow;
+}
+
+a:active {
+  color: green;
+}
