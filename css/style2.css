@@ -1,5 +1,6 @@
 div p {
   border-color: orange;
+  border: 2rem;
 }
 
 p > li {

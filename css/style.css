@@ -1,23 +1,60 @@
 
-        html {
-            margin: 0;
-            padding: 0;
-            background: red;
-            color: #FFFFFF;
-        }
+html {
+    margin: 0;
+    padding: 0;
+    background: red;
+    color: #FFFFFF;
+}
 
-        h1 {
-            color: black;
-            text-align: center;
-        }
+h1 {
+    color: black;
+    text-align: center;
+}
 
-        p {
+p {
             
-            text-align: center;
-        }
-        #page-container {
-            display: grid;
-            grid-template-rows: 1fr 1fr 1fr;
-            align-items: center;
-            justify-items: center;
-        }
+    text-align: center;
+}
+
+#page-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.one {
+    width: 100%;
+    height: 50px;
+    transition: height 2s linear;
+    transition-delay: 1s;
+    background-color: black;
+}
+
+.one:hover {
+    height: 400px;
+}
+
+@keyframes colorshift {
+    0%{
+        background-color: black;
+    }
+    50%{
+        background-color: green;
+    }
+    100%{
+        backgound-color: red;
+    }
+}
+
+.two {
+    width: 100px;
+    height: 125px;
+    background-color: red;
+}
+
+.two:hover {
+    animation-name: colorshift;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+}
