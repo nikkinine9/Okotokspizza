@@ -1,0 +1,29 @@
+div p {
+  border-color: orange;
+  border: 2rem;
+}
+
+p > li {
+  outline: 10px solid black;
+}
+
+ul + p {
+  background-color: red;
+}
+
+a:link {
+  color: blue;
+}
+
+a:visited {
+  color: purple;
+}
+
+a:hover {
+  color: yellow;
+}
+
+a:active {
+  color: green;
+}
+/*# sourceMappingURL=linkstyle.css.map */

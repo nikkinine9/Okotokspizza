@@ -1,0 +1,32 @@
+.dropdown {
+    position: relative;
+    display: inline-block;
+    padding: 3rem;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: red;
+    min-width: 500px;
+    box-shadow: 0px 8px 16px 0px black;
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+th {
+    text-align: center;
+}
+
+th,
+td {
+    padding: 10px;
+}
+
+.dropdown ul ul {
+    display: none;
+}
+
+.dropdown ul :hover .dropdown-content {
+    display: block;
+}
