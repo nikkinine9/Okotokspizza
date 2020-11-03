@@ -7,7 +7,7 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: red;
+  background-color: olive;
   min-width: 500px;
   -webkit-box-shadow: 0px 8px 16px 0px black;
           box-shadow: 0px 8px 16px 0px black;
@@ -30,5 +30,27 @@ td {
 
 .dropdown ul :hover .dropdown-content {
   display: block;
+}
+
+/* tablet rules */
+@media only screen and (min-width: 768px) {
+  .photo {
+    max-width: -webkit-fill-available;
+    max-width: -moz-available;
+    max-width: stretch;
+    float: right;
+    margin-right: 0.5rem;
+  }
+}
+
+/* desktop rules */
+@media only screen and (min-width: 991px) {
+  .grid-container {
+    -ms-grid-rows: 120px 1fr 30px;
+        grid-template-rows: 120px 1fr 30px;
+  }
+  header button {
+    display: none;
+  }
 }
 /*# sourceMappingURL=menustyle.css.map */

@@ -2,56 +2,97 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-}
-
-header,
-main,
-footer {
-    padding: 0.5rem;
-}
-
-header {
-    background-color: #981515;
-    text-align: center;
-}
-
-a {
-    color: white;
-}
-
-span.navigationSpace {
-    padding-left: 50px;
-}
-
-.logo {
-    padding: 0;
-    margin: 0;
-    max-height: 100%;
-    float: left;
-}
-
-header p {
-    padding: 0.5rem;
-    margin: 0.5rem;
-    color: white;
-}
-
-h2 {
-    text-align: center;
-}
-
-main {
-    background-color: #f5efab;
-}
-
-footer {
-    background-color: #df3636;
+    font-family: Helvetica, sans-serif;
 }
 
 .grid-container {
     display: grid;
     grid-template-rows: 60px 1fr 30px;
     min-height: 100vh;
+    header,
+    main,
+    footer {
+        padding: 0.5rem;
+    }
+    >header {
+        background-color: #981515;
+        text-align: center;
+    }
+    a {
+        color: white;
+    }
+    span.navigationSpace {
+        padding-left: 50px;
+    }
+    .logo {
+        padding: 0;
+        margin: 0;
+        max-height: 100%;
+        float: left;
+    }
+    header p {
+        padding: 0.5rem;
+        margin: 0.5rem;
+        color: white;
+    }
+    .photo {
+        display: inline-flexbox;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        float: right;
+    }
+    h1 {
+        text-align: center;
+        font-size: 60px;
+        padding: 0.5rem;
+    }
+    h2 {
+        font-size: 40px;
+    }
+    >main {
+        background-color: #f5efab;
+        >section {
+            padding: 1rem 0.25rem;
+        }
+    }
+    main .centered {
+        position: absolute;
+        top: 50%;
+        left: 80%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 20px;
+    }
+    .restaurantphoto {
+        width: 100%;
+        height: 100%
+    }
+    .fresh {
+        font-size: 30px;
+    }
+    .specials {
+        .special-items-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 2rem;
+        }
+        .special-photo {
+            background-size: cover;
+            background-position: center center;
+            width: 100%;
+            height: 400px;
+        }
+        .special-name {
+            text-align: center;
+        }
+        .special-price {
+            text-align: center;
+        }
+    }
+    >footer {
+        background-color: #df3636;
+    }
 }
 
 
@@ -59,9 +100,24 @@ footer {
 
 @media only screen and (min-width: 768px) {
     .photo {
-        max-width: 30%;
+        max-width: stretch;
         float: right;
         margin-right: 0.5rem;
+    }
+    .ingredientsphoto {
+        height: 50%;
+        width: 50%;
+        float: right;
+    }
+    .about-us {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        >div:first-child {
+            align-self: center;
+            p {
+                font-size: 30px;
+            }
+        }
     }
 }
 
@@ -72,8 +128,7 @@ footer {
     .grid-container {
         grid-template-rows: 120px 1fr 30px;
     }
-}
-
-header button {
-    display: none;
+    header button {
+        display: none;
+    }
 }
