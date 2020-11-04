@@ -57,7 +57,7 @@
 .grid-container h1 {
   text-align: center;
   font-size: 60px;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 .grid-container h2 {
@@ -89,6 +89,7 @@
 
 .grid-container .fresh {
   font-size: 30px;
+  text-align: center;
 }
 
 .grid-container .specials .special-items-container {
@@ -128,7 +129,7 @@
     margin-right: 0.5rem;
   }
   .ingredientsphoto {
-    height: 50%;
+    height: 800px;
     width: 50%;
     float: right;
   }
