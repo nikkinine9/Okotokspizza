@@ -29,15 +29,15 @@
   color: white;
 }
 
-.grid-container span.navigationSpace {
-  padding-left: 50px;
-}
-
 .grid-container .logo {
   padding: 0;
   margin: 0;
-  max-height: 100%;
+  height: 100%;
   float: left;
+}
+
+.grid-container .logo img {
+  height: 100%;
 }
 
 .grid-container header p {
@@ -46,11 +46,54 @@
   color: white;
 }
 
+.grid-container .topmenu {
+  background-color: #981515;
+  overflow: show;
+  padding: 0px 0px;
+  margin: 0px auto;
+  width: 100%;
+  height: 34px;
+  text-align: center;
+}
+
+.grid-container .topmenu span.navigationSpace {
+  padding-left: 0px;
+}
+
+.grid-container .topmenu span {
+  margin: 0px 0px;
+  padding: 0px 0px;
+  margin-top: 5px;
+  margin-left: 7px;
+  height: 34px;
+  max-width: 100%;
+}
+
+.grid-container .topmenu span a {
+  display: inline;
+  list-style-type: none;
+  margin: 7px 0px;
+  padding: 0px 0px;
+  height: 34px;
+  padding-right: 4px;
+  padding-right: 4px;
+}
+
 .grid-container .photo {
   display: inline-flexbox;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 100%;
+  height: 100%;
+  float: left;
+}
+
+.grid-container .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   float: right;
 }
 
@@ -62,6 +105,12 @@
 
 .grid-container h2 {
   font-size: 40px;
+  list-style-type: none;
+}
+
+.grid-container h3 {
+  padding: 0;
+  color: white;
 }
 
 .grid-container > main {
@@ -72,14 +121,9 @@
   padding: 1rem 0.25rem;
 }
 
-.grid-container main .centered {
-  position: absolute;
-  top: 50%;
-  left: 80%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  color: white;
-  font-size: 20px;
+.grid-container > main .video {
+  height: 75%;
+  width: 100%;
 }
 
 .grid-container .restaurantphoto {
@@ -88,35 +132,42 @@
 }
 
 .grid-container .fresh {
+  padding: 1rem;
   font-size: 30px;
-  text-align: center;
-}
-
-.grid-container .specials .special-items-container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  grid-gap: 2rem;
-}
-
-.grid-container .specials .special-photo {
-  background-size: cover;
-  background-position: center center;
-  width: 100%;
-  height: 400px;
-}
-
-.grid-container .specials .special-name {
-  text-align: center;
-}
-
-.grid-container .specials .special-price {
   text-align: center;
 }
 
 .grid-container > footer {
   background-color: #df3636;
+}
+
+.specials .special-items-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 1rem;
+}
+
+.specials .special-photo {
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 300px;
+}
+
+.specials .special-name {
+  text-align: center;
+  font-weight: bold;
+}
+
+.specials .special-price {
+  text-align: center;
+  font-weight: bold;
+}
+
+.about-us img {
+  max-width: 100%;
 }
 
 /* tablet rules */
@@ -125,7 +176,7 @@
     max-width: -webkit-fill-available;
     max-width: -moz-available;
     max-width: stretch;
-    float: right;
+    float: left;
     margin-right: 0.5rem;
   }
   .ingredientsphoto {
@@ -147,6 +198,9 @@
   .about-us > div:first-child p {
     font-size: 30px;
   }
+  .topnav a:not(:first-child) {
+    display: none;
+  }
 }
 
 /* desktop rules */
@@ -155,8 +209,9 @@
     -ms-grid-rows: 120px 1fr 30px;
         grid-template-rows: 120px 1fr 30px;
   }
-  header button {
-    display: none;
+  .specials .special-items-container {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
   }
 }
 /*# sourceMappingURL=style.css.map */
